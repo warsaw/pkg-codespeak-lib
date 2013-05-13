@@ -1,9 +1,9 @@
-codespeak-lib (1.4.14-1) UNRELEASED; urgency=low
+codespeak-lib (1.4.14-1) unstable; urgency=low
 
   * New upstream release.
   * Update debian/watch file. Thanks to Simon Chopin.
 
- -- Chris Lamb <lamby@debian.org>  Mon, 13 May 2013 23:09:35 +0100
+ -- Chris Lamb <lamby@debian.org>  Mon, 13 May 2013 23:09:47 +0100
 
 codespeak-lib (1.4.12-1) unstable; urgency=low
 
