@@ -1,8 +1,9 @@
-codespeak-lib (1.4.14-2) UNRELEASED; urgency=low
+codespeak-lib (1.4.15-1) UNRELEASED; urgency=low
 
+  * New upstream version. (Closes: #716782)
   * Update homepage. Thanks to Yaroslav Halchenko. (Closes: #711228)
 
- -- Chris Lamb <lamby@debian.org>  Thu, 06 Jun 2013 11:07:55 +0100
+ -- Chris Lamb <lamby@debian.org>  Sat, 13 Jul 2013 23:29:00 +0100
 
 codespeak-lib (1.4.14-1) unstable; urgency=low
 
