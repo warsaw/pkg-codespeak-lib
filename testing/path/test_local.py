@@ -221,6 +221,12 @@ class TestLocalPath(common.CommonFSTests):
         # check that breadth comes last
         assert l[0] == p1
 
+    def test_fnmatch_file_abspath(self, tmpdir):
+        b = tmpdir.join("a", "b")
+        assert b.fnmatch(os.sep.join("ab"))
+        pattern = os.sep.join([str(tmpdir), "*", "b"])
+        assert b.fnmatch(pattern)
+
     def test_sysfind(self):
         name = sys.platform == "win32" and "cmd" or "test"
         x = py.path.local.sysfind(name)
@@ -454,6 +460,10 @@ def test_samefile(tmpdir):
         p2 = p.__class__(str(p).upper())
         assert p1.samefile(p2)
 
+def test_listdir_single_arg(tmpdir):
+    tmpdir.ensure("hello")
+    assert tmpdir.listdir("hello")[0].basename == "hello"
+
 def test_mkdtemp_rootdir(tmpdir):
     dtmp = local.mkdtemp(rootdir=tmpdir)
     assert tmpdir.listdir() == [dtmp]
@@ -640,7 +650,7 @@ class TestPOSIXLocalPath:
     def test_join_to_root(self, path1):
         root = path1.parts()[0]
         assert len(str(root)) == 1
-        assert str(root.join('a')) == '/a'
+        assert str(root.join('a')) == '//a'  # posix allows two slashes
 
     def test_join_root_to_root_with_no_abs(self, path1):
         nroot = path1.join('/')
