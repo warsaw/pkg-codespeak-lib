@@ -5,6 +5,7 @@ Maintainer: Chris Lamb <lamby@debian.org>
 Build-Depends: debhelper (>= 7.0.50~), python-all (>= 2.6.6-3~), python3-all (>= 3.1.2-6~), python-setuptools, python3-setuptools
 Standards-Version: 3.9.3
 Homepage: https://bitbucket.org/hpk42/py
+XS-Testsuite: autopkgtest
 X-Python3-Version: >= 3.2
 Vcs-Git: git://github.com/lamby/pkg-codespeak-lib.git
 Vcs-Browser: https://github.com/lamby/pkg-codespeak-lib

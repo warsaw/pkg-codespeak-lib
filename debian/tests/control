@@ -1,0 +1,2 @@
+Tests: unit
+Depends: python-py, python-pytest, python3-py, python3-pytest

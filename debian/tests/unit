@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+# enter testing directory so that we don't accidentally find 'py' directory
+# but instead use the system py module.
+cd testing
+python -m pytest .
+python3 -m pytest .
